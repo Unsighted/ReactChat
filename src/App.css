@@ -1,0 +1,407 @@
+/* .App {
+  text-align: center;
+} */
+
+.App-header {
+  /* background-color: #2e2e2e; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* font-size: calc(10px + 2vmin); */
+  color: white;
+}
+
+.MuiSnackbar-anchorOriginTopCenter{
+  z-index: 10000;
+}
+
+.MuiButton-containedSizeSmall{
+  z-index: 99999;
+}
+
+@media (min-width: 600px){
+  div.MuiSnackbar-root{
+  z-index: 10000;
+  }
+}
+
+body {
+	background-image: url('./images/whatsappdark.jpg');
+}
+
+#img{
+  border: 5px solid rgb(255, 255, 255);
+  box-shadow: #2e2e2e 2px;
+  margin-top: 40px;
+  margin-left: 20px;
+  box-shadow: 0 0 5px 1px rgba(51, 51, 51, .3);
+}
+
+#img:hover{
+  filter: grayscale(53);
+}
+
+.adminActions {
+  position: fixed;
+  bottom: 75px; left: 20px;
+  /* -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite; */
+  transform: scale(1.1)
+}
+
+  .adminButton {
+    height: 50px;
+    width: 50px;
+    background-color: rgba(67, 84, 143, 0.795);
+    border-radius: 50%;
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+    .adminButton i {
+      font-size: 22px;
+    }
+
+  .adminButtons {
+    position: absolute;
+    width: 100%;
+    bottom: 120%;
+    text-align: center;
+  }
+
+    .adminButtons a {
+      display: block;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      text-decoration: none;
+      margin: 10px auto 0;
+      line-height: 1.15;
+      color: #fff;
+      opacity: 0;
+      visibility: hidden;
+      position: relative;
+      box-shadow: 0 0 5px 1px rgba(51, 51, 51, .3);
+    }
+
+      .adminButtons a:hover {
+        transform: scale(1.05);
+      }
+
+      .adminButtons a:nth-child(1) {background-color: #a022ff; transition: opacity .2s ease-in-out .3s, transform .15s ease-in-out;}
+      .adminButtons a:nth-child(2) {background-color: #03a9f4; transition: opacity .2s ease-in-out .25s, transform .15s ease-in-out;}
+      .adminButtons a:nth-child(3) {background-color: #f44336; transition: opacity .2s ease-in-out .2s, transform .15s ease-in-out;}
+      .adminButtons a:nth-child(4) {background-color: #41b9b3; transition: opacity .2s ease-in-out .15s, transform .15s ease-in-out;}
+
+      .adminActions a i {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+  .adminToggle {
+    box-shadow: 0 3px 6px 2px rgba(51, 51, 51, .3);
+    -webkit-appearance: none;
+    position: absolute;
+    border-radius: 50%;
+    top: 0; left: 0;
+    margin: 0;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    z-index: 2;
+    transition: box-shadow .2s ease-in-out;
+
+  }
+
+    .adminToggle:hover {
+      transform: scale(1.1)
+    }
+
+      @keyframes animate-loading {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+    }
+
+
+    @-webkit-keyframes animate-loading {
+      0% {
+        transform: rotateX(0deg);
+      }
+      100% {
+        transform: rotateY(360deg);
+      }
+    }
+
+    .adminToggle:checked ~ .adminButtons a {
+      opacity: 1;
+      visibility: visible;
+    }
+
+
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+h2 {
+  font-weight: 400;
+}
+
+.filupp > input[type=file] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.filupp {
+  position: fixed;
+  /* background: #242424; */
+  display: block;
+  top: 10px;
+  padding: 1em;
+  font-size: 1em;
+  width: 100%;
+  height: 3.3em;
+  color: #ffffff;
+  /* box-shadow: 0 1px 3px #0b0b0b; */
+  z-index: 9999;
+  text-align: right;
+}
+
+.MuiAvatar-circle{
+  border: #2bffe3 3px solid;
+}
+
+  .tippy-box[data-theme~='tomato'] {
+   
+    border: none;
+    background: linear-gradient(#487bf0, #fd97f8);
+    color: rgb(255, 255, 255);
+    will-change: opacity;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 4px;
+    -webkit-transition: background 0.2s,color 0.1s;
+    transition: background 0.2s,color 0.1s;
+  }
+
+  .tippy-box[data-theme~='dark'] {
+   
+    border: none;
+    background: linear-gradient(#000000, #4e4e4e);
+    color: rgb(255, 255, 255);
+    will-change: opacity;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 4px;
+    -webkit-transition: background 0.2s,color 0.1s;
+    transition: background 0.2s,color 0.1s;
+  }
+
+/* .filupp:before {
+  content: "";
+  position: absolute;
+  top: 1.5em;
+  right: 0.75em;
+  width: 2em;
+  height: 1.25em;
+  border: 3px solid #dd4040;
+  border-top: 0;
+  text-align: center;
+} */
+
+/* .filupp:after {
+  content: "➜";
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 0.65em;
+  right: 0.45em;
+  font-size: 2em;
+  color: #dd4040;
+  line-height: 0;
+} */
+
+/* .filupp-file-name {
+  width: 75%;
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+} */
+
+* {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.login {
+  position: relative;
+  top: 50%;
+  width: 250px;
+  display: table;
+  margin: -150px auto 0 auto;
+  background: #fff;
+  border-radius: 4px;
+}
+.legend {
+  position: relative;
+  width: 100%;
+  display: block;
+  background: #FF7052;
+  padding: 15px;
+  color: #fff;
+  font-size: 20px;
+}
+.legend:after {
+  content: "";
+  background-image: url(http://simpleicon.com/wp-content/uploads/multy-user.png);
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+  background-position: 152px -16px;
+  opacity: 0.06;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+.inputval {
+  position: relative;
+  width: 90%;
+  margin: 15px auto;
+}
+.inputval span {
+  position: absolute;
+  display: block;
+  color: #d4d4d4;
+  left: 10px;
+  top: 8px;
+  font-size: 20px;
+}
+.inputval input {
+  width: 100%;
+  padding: 10px 5px 10px 40px;
+  display: block;
+  border: 1px solid #EDEDED;
+  border-radius: 4px;
+  transition: 0.2s ease-out;
+  color: #a1a1a1;
+}
+.inputval input:focus {
+  padding: 10px 5px 10px 10px;
+  outline: 0;
+  border-color: #FF7052;
+}
+.bs {
+  width: 45px;
+  height: 45px;
+  display: block;
+  margin: 0 auto -15px auto;
+  background: #fff;
+  border-radius: 100%;
+  border: 1px solid #FF7052;
+  color: #FF7052;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 7px #fff;
+  transition: 0.2s ease-out;
+}
+.bs:hover,
+.bs:focus {
+  background: #FF7052;
+  color: #fff;
+  outline: 0;
+}
+.feedback {
+  position: absolute;
+  bottom: -70px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  background: #2ecc71;
+  padding: 10px 0;
+  font-size: 12px;
+  display: none;
+  opacity: 0;
+}
+.feedback:before {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(46, 204, 113, 0);
+  border-bottom-color: #2ecc71;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:500);
+.google-btn {
+  width: 184px;
+  height: 42px;
+  background-color: #4285f4;
+  border-radius: 2px;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.google-btn .google-icon-wrapper {
+  position: absolute;
+  margin-top: 1px;
+  margin-left: 1px;
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+.google-btn .google-icon {
+  position: absolute;
+  margin-top: 11px;
+  margin-left: 11px;
+  width: 18px;
+  height: 18px;
+}
+.google-btn .btn-text {
+  float: right;
+  margin: 11px 11px 0 0;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  font-family: "Roboto";
+}
+.google-btn:hover {
+  box-shadow: 0 0 6px #4285f4;
+}
+.google-btn:active {
+  background: #1669f2;
+}
